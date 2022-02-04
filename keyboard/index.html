@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <span><i>C</i></span>
+        <span><i>S</i></span>
+        <span><i>S</i></span><br>
+        <span><i>O</i></span>
+        <span><i>N</i></span>
+        <span><i>L</i></span>
+        <span><i>Y</i></span>
+        <span><i></i></span>
+    </div>
+    <script>
+        let a = document.querySelector('.content');
+        a.addEventListener('click',(e)=>{
+            if(e.target && e.target.tagName=='SPAN'){
+                console.log(e.target.querySelector('i').innerHTML)
+            }
+        })
+    </script>
+</body>
+</html>
