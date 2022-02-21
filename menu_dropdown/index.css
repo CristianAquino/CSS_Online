@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    background-color: #fafafa;
+    background-color: #262e31;
 }
 .dropdown{
     position: relative;
