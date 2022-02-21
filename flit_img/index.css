@@ -10,6 +10,7 @@ body{
     min-height: 100vh;
     transform-style: preserve-3d;
     perspective: 1000px;
+    background-color: #262e31;
 }
 .box{
     position: relative;
