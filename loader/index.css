@@ -7,8 +7,12 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #001d30;
     min-height: 100vh;
+    background-color: #001d30;
+    animation: changeBg 5s linear infinite;
+}
+@keyframes changeBg{
+    to{filter: hue-rotate(360deg);}
 }
 .loader{
     position: absolute;
