@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>5 Star Skills Rating Bar</h2>
+        <div class="skills">
+            <h3 class="name">Html</h3>
+            <div class="rating">
+                <input type="radio" name="html" id="10" value="5">
+                <input type="radio" name="html" id="9" value="5">
+                <input type="radio" name="html" id="8" value="5">
+                <input type="radio" name="html" id="7" value="5">
+                <input type="radio" name="html" id="6" value="5">
+                <input type="radio" name="html" id="5" value="5">
+                <input type="radio" name="html" id="4" value="5">
+                <input type="radio" name="html" id="3" value="5">
+                <input type="radio" name="html" id="2" value="5">
+                <input type="radio" name="html" id="1" value="5">
+            </div>
+        </div>
+        <div class="skills">
+            <h3 class="name">Css</h3>
+            <div class="rating">
+                <input type="radio" name="css" id="">
+                <input type="radio" name="css" id="">
+                <input type="radio" name="css" id="">
+                <input type="radio" name="css" id="">
+                <input type="radio" name="css" id="">
+                <input type="radio" name="css" id="">
+                <input type="radio" name="css" id="">
+                <input type="radio" name="css" id="">
+                <input type="radio" name="css" id="">
+                <input type="radio" name="css" id="">
+            </div>
+        </div>
+        <div class="skills">
+            <h3 class="name">Javascript</h3>
+            <div class="rating">
+                <input type="radio" name="js" id="">
+                <input type="radio" name="js" id="">
+                <input type="radio" name="js" id="">
+                <input type="radio" name="js" id="">
+                <input type="radio" name="js" id="">
+                <input type="radio" name="js" id="">
+                <input type="radio" name="js" id="">
+                <input type="radio" name="js" id="">
+                <input type="radio" name="js" id="">
+                <input type="radio" name="js" id="">
+            </div>
+        </div>
+        <div class="skills">
+            <h3 class="name">Photoshop</h3>
+            <div class="rating">
+                <input type="radio" name="photoshop" id="">
+                <input type="radio" name="photoshop" id="">
+                <input type="radio" name="photoshop" id="">
+                <input type="radio" name="photoshop" id="">
+                <input type="radio" name="photoshop" id="">
+                <input type="radio" name="photoshop" id="">
+                <input type="radio" name="photoshop" id="">
+                <input type="radio" name="photoshop" id="">
+                <input type="radio" name="photoshop" id="">
+                <input type="radio" name="photoshop" id="">
+            </div>
+        </div>
+        <div class="skills">
+            <h3 class="name">ilustrator</h3>
+            <div class="rating">
+                <input type="radio" name="ilustrator" id="">
+                <input type="radio" name="ilustrator" id="">
+                <input type="radio" name="ilustrator" id="">
+                <input type="radio" name="ilustrator" id="">
+                <input type="radio" name="ilustrator" id="">
+                <input type="radio" name="ilustrator" id="">
+                <input type="radio" name="ilustrator" id="">
+                <input type="radio" name="ilustrator" id="">
+                <input type="radio" name="ilustrator" id="">
+                <input type="radio" name="ilustrator" id="">
+            </div>
+        </div>
+    </div>
+    <!-- EXTRA -->
+    <script>
+        let rating = document.querySelectorAll('.rating input');
+        let a = 0
+        rating.forEach(elemento =>{
+            elemento.addEventListener('click',(e)=>{
+                for(i=0;i<parseInt(e.target.getAttribute('id'));i++){
+                    a += parseInt(rating[i].value);
+                }
+                console.log(a/10)
+                a = 0
+            })
+        })
+    </script>
+</body>
+</html>
