@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="icon">
+                <img src="../2D_to_3D/img/shoes1.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Shoes1</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, vitae iusto. Quam, consectetur nisi rerum in assumenda possimus, quo molestiae tenetur alias harum omnis facilis non culpa illum, quaerat animi repellendus? Magnam ea temporibus consequatur voluptas error, quaerat enim assumenda excepturi, dolore dolor itaque reiciendis! Velit mollitia distinctio, harum sunt, atque amet ratione delectus iure ab consequuntur voluptatem, perspiciatis repellat.</p>
+            </div>
+            <span class="more">Read more</span>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <img src="../2D_to_3D/img/shoes2.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Shoes2</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, vitae iusto. Quam, consectetur nisi rerum in assumenda possimus, quo molestiae tenetur alias harum omnis facilis non culpa illum, quaerat animi repellendus? Magnam ea temporibus consequatur voluptas error, quaerat enim assumenda excepturi, dolore dolor itaque reiciendis! Velit mollitia distinctio, harum sunt, atque amet ratione delectus iure ab consequuntur voluptatem, perspiciatis repellat.</p>
+            </div>
+            <span class="more">Read more</span>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <img src="../2D_to_3D/img/shoes3.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Shoes3</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, vitae iusto. Quam, consectetur nisi rerum in assumenda possimus, quo molestiae tenetur alias harum omnis facilis non culpa illum, quaerat animi repellendus? Magnam ea temporibus consequatur voluptas error, quaerat enim assumenda excepturi, dolore dolor itaque reiciendis! Velit mollitia distinctio, harum sunt, atque amet ratione delectus iure ab consequuntur voluptatem, perspiciatis repellat.</p>
+            </div>
+            <span class="more">Read more</span>
+        </div>
+    </div>
+    <script>
+        let more = document.querySelectorAll('.more');
+        more.forEach(element =>{
+            element.addEventListener('click',()=>{
+                element.parentNode.classList.toggle('active');
+                if (element.parentNode.classList[1]=='active'){
+                    console.log(element.parentNode.classList)
+                    element.innerHTML = 'Read lease'
+                }else{
+                    element.innerHTML = 'Read more'
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
