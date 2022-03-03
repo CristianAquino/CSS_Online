@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="imc">
+            <input type="number" class="peso" placeholder="Peso">
+            <input type="number" class="altura" placeholder="Altura">
+            <button>Calcular</button>
+        </div>
+        <div class="result">
+            <p class="mensaje"></p>
+            <div class="imgBx">
+                <img src="masa.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        const peso = document.querySelector('.peso');
+        const altura = document.querySelector('.altura');
+        
+        document.querySelector('button').addEventListener('click',()=>{
+            document.querySelector('.content').classList.toggle('active')
+            let al = parseInt(altura.value)/100
+            let imc = parseInt(peso.value)/Math.pow(al,2);
+            if(imc <= 18.5){
+                document.querySelector('p').innerHTML = `IMC = ${imc.toFixed(2)}`
+                
+            }else if(imc<40.5){
+                document.querySelector('p').innerHTML = `IMC = ${imc.toFixed(2)}`
+                document.querySelector('body').style.setProperty('--i',3);
+            }
+        })
+    </script>
+</body>
+</html>
