@@ -61,8 +61,10 @@
         
         function calculoIMC(peso,altura){
             let imc = peso / Math.pow(altura/100,2);
+            //datos[2].innerHTML = `IMC: ${imc.toFixed(2)}`;
+            datos[2].innerHTML = isNaN(imc) ? `0`: `IMC: ${imc.toFixed(2)}`;
+
             if (imc < 18.5){
-                datos[2].innerHTML = `IMC: ${imc.toFixed(2)}`;
                 document.querySelector('body').style.setProperty('--i',6);
             }else if(imc < 24.9){
                 document.querySelector('body').style.setProperty('--i',5);
