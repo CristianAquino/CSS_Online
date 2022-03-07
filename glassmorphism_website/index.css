@@ -13,7 +13,8 @@ section{
     min-height: 100vh;
     background-image: url(../2D_to_3D/img/fondo.jpg);
     background-size: cover;
-    background-position: center;background-attachment: fixed;
+    background-position: center;
+    background-attachment: fixed;
     padding: 50px;
 }
 .container{
