@@ -11,8 +11,8 @@
     <div class="content">
         <div class="box data">
             <h2>IMC</h2>
-            <input type="number" id="altura" placeholder="Altura">
-            <input type="number" id="peso" placeholder="Peso">
+            <input type="number" id="altura" placeholder="Altura(cm)">
+            <input type="number" id="peso" placeholder="Peso(Kg)">
             <button class="btn btndata">Calcular</button>
         </div>
         <div class="box result">
@@ -37,12 +37,14 @@
         const peso = document.getElementById('peso');
         const datos = result.querySelectorAll('p')
         
-        /*if(altura.value=='' && peso.value==''){
-            btndata.style.visibility='hidden';
-        }else{
-            btndata.style.visibility='visible';
-        }*/
-        
+        setInterval(()=>{
+            if(altura.value=='' || peso.value==''){
+                btndata.style.pointerEvents='none';
+            }else{
+                btndata.style.pointerEvents='all';
+            }   
+        },500);
+
         btndata.addEventListener('click',()=>{
             data.classList.add('active');
             result.classList.add('active');
@@ -61,8 +63,7 @@
         
         function calculoIMC(peso,altura){
             let imc = peso / Math.pow(altura/100,2);
-            //datos[2].innerHTML = `IMC: ${imc.toFixed(2)}`;
-            datos[2].innerHTML = isNaN(imc) ? `0`: `IMC: ${imc.toFixed(2)}`;
+            datos[2].innerHTML = isNaN(imc) ? `IMC:0`: `IMC: ${imc.toFixed(2)}`;
 
             if (imc < 18.5){
                 document.querySelector('body').style.setProperty('--i',6);
