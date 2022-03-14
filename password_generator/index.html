@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="inputBox">
+        <h2>Random Password Generator App</h2>
+        <input type="text" id="password" placeholder="Create Password" readonly>
+        <span class="copy"><i class="fa fa-clone" aria-hidden="true"></i></span>
+        <div id="btn">Generate Password</div>
+    </div>
+    <div class="alertBox"></div>
+    <script>
+        function getPassword(){
+            const chars = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*()_+?><:{}[]";
+            const passwordLength = 16;
+            let password = "";
+
+            for(let i=0;i<passwordLength;i++){
+                let randomNumber = Math.floor(Math.random()*chars.length);
+                password += chars.substring(randomNumber,randomNumber+1);
+            }
+            document.getElementById("password").value = password;
+            alertBox.innerHTML = `New Password Copied: <br>${password}`;
+        }
+
+        function copyPassword(){
+            const copyPassText = document.querySelector('#password');
+            copyPassText.select();
+            copyPassText.setSelectionRange(0,9999);
+            document.execCommand("copy");
+            alertBox.classList.toggle('active');
+            setTimeout(()=>{
+                alertBox.classList.toggle('active');
+            },2000)
+        }
+        const btn = document.querySelector('#btn');
+        const alertBox = document.querySelector('.alertBox');
+        const copy = document.querySelector('.fa');
+        btn.addEventListener('click',getPassword);
+        copy.addEventListener('click',copyPassword);
+    </script>
+</body>
+</html>
