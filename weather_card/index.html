@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="front">
+        <header>
+          <h3>New Delhi</h3>
+          <div class="more">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </div>
+        </header>
+        <div class="weather">
+          <i class="fa fa-cloud" aria-hidden="true"></i>
+          <h1>8<sup>o</sup><br /><span>Today</span></h1>
+        </div>
+        <ul class="forecast">
+          <li>
+            <div class="day">Sunday</div>
+            <div class="temperature">
+              <i class="fa fa-cloud" aria-hidden="true"></i>9°
+            </div>
+          </li>
+          <li>
+            <div class="day">Sunday</div>
+            <div class="temperature">
+              <i class="fa fa-cloud" aria-hidden="true"></i>9°
+            </div>
+          </li>
+          <li>
+            <div class="day">Sunday</div>
+            <div class="temperature">
+              <i class="fa fa-cloud" aria-hidden="true"></i>9°
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="back">
+        <div class="go-back">
+          <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+        </div>
+        <ul class="forecast">
+          <li>
+            <div class="day">Sunday</div>
+            <div class="temperature">
+              <i class="fa fa-cloud" aria-hidden="true"></i>9°
+            </div>
+          </li>
+          <li>
+            <div class="day">Sunday</div>
+            <div class="temperature">
+              <i class="fa fa-cloud" aria-hidden="true"></i>9°
+            </div>
+          </li>
+          <li>
+            <div class="day">Sunday</div>
+            <div class="temperature">
+              <i class="fa fa-cloud" aria-hidden="true"></i>9°
+            </div>
+          </li>
+          <li>
+            <div class="day">Sunday</div>
+            <div class="temperature">
+              <i class="fa fa-cloud" aria-hidden="true"></i>9°
+            </div>
+          </li>
+          <li>
+            <div class="day">Sunday</div>
+            <div class="temperature">
+              <i class="fa fa-cloud" aria-hidden="true"></i>9°
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    const more = document.querySelector("header");
+    const back = document.querySelector(".go-back");
+    back.addEventListener("click", () => {
+      back.parentElement.classList.remove("active");
+      more.parentElement.classList.remove("active");
+    });
+    more.addEventListener("click", () => {
+      more.parentElement.classList.add("active");
+      back.parentElement.classList.add("active");
+    });
+  </script>
+</html>
