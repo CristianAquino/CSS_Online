@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../2D_to_3D/img/imagen2.jpg);
+  background-size: cover;
+  display: flex;
+}
+section .leftBox {
+  width: 50%;
+  height: 100%;
+  padding: 50px;
+}
+section .leftBox .content {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  transition: 0.5s;
+}
+section .leftBox .content:hover {
+  background-color: #e91e63;
+}
+section .leftBox .content h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+section .leftBox .content p {
+  margin: 10px 0 0;
+}
+section .events {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+}
+section .events ul {
+  /* position: absolute; */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section .events ul li {
+  list-style: none;
+  background-color: #fff;
+  height: 225px;
+  display: flex;
+  margin: 15px 0px;
+}
+section .events ul li .time {
+  position: relative;
+  padding: 20px;
+  background-color: #262626;
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .events ul li:hover .time {
+  background-color: #e91e63;
+}
+section .events ul li .time h2 {
+  color: #fff;
+  font-size: 60px;
+  line-height: 30px;
+}
+section .events ul li .time h2 span {
+  font-size: 30px;
+}
+section .events ul li .details {
+  padding: 20px;
+  background-color: #fff;
+  width: 70%;
+  height: 100%;
+}
+section .events ul li .details h3 {
+  font-size: 22px;
+}
+section .events ul li .details p {
+  margin: 10px 0 0;
+  font-size: 16px;
+}
+section .events ul li .details a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px solid #262626;
+  margin-top: 15px;
+  font-size: 18px;
+  transition: 0.5s;
+  margin-left: calc(70% - 50px);
+}
+section .events ul li .details a:hover {
+  background-color: #e91e63;
+  color: #fff;
+  border-color: #e91e63;
+}
