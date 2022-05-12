@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container" id="blur">
+      <div class="content">
+        <h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+          laboriosam, adipisci blanditiis repellendus hic labore nulla possimus
+          deleniti? Quos, neque.
+        </h2>
+        <img src="https://i.postimg.cc/R0sHkknn/Tanya-Degurechaff.jpg" />
+        <a href="#">Read More</a>
+      </div>
+    </div>
+    <div id="popup">
+      <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus hic
+        voluptates sint dolore nam nisi minima sunt maiores, non blanditiis
+        culpa velit at! Totam quis soluta minima numquam placeat aspernatur!
+      </p>
+      <a href="#">Close</a>
+    </div>
+    <script>
+      let a = document.querySelectorAll("a");
+      a[0].addEventListener("click", () => {
+        let blur = document.getElementById("blur");
+        blur.classList.toggle("active");
+        let popup = document.getElementById("popup");
+        popup.classList.toggle("active");
+      });
+      a[1].addEventListener("click", () => {
+        let blur = document.getElementById("blur");
+        blur.classList.toggle("active");
+        let popup = document.getElementById("popup");
+        popup.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
