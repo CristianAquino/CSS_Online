@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="sec">
+      <header>
+        <a href="#">
+          <img
+            src="https://i.postimg.cc/wjG0D70P/pepsi-logo.png"
+            class="logo"
+          />
+        </a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>That's What<br /><span>I like </span></h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+            facilis eius maiores modi quidem aspernatur doloribus totam adipisci
+            aperiam veritatis dolorum quos unde quasi eligendi delectus,
+            accusamus debitis fugit veniam. Unde quibusdam officia ducimus
+            dolorem veritatis.
+          </p>
+          <a href="#">View All Products</a>
+        </div>
+        <div class="imgBox">
+          <img src="https://i.postimg.cc/MGft5qLG/pepsi001.png" class="pepsi" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <!-- <img
+            src="https://i.postimg.cc/MGft5qLG/pepsi001.png"
+            onclick="imgSlider('https://i.postimg.cc/MGft5qLG/pepsi001.png'); changeColor('#0062b3')"
+          /> -->
+          <img
+            src="https://i.postimg.cc/MGft5qLG/pepsi001.png"
+            style="color: #0062b3"
+          />
+        </li>
+        <li>
+          <!-- <img
+            src="https://i.postimg.cc/4dzPCwsk/pepsi002.png"
+            onclick="imgSlider('https://i.postimg.cc/4dzPCwsk/pepsi002.png'); changeColor('#e60c2c')"
+          /> -->
+          <img
+            src="https://i.postimg.cc/4dzPCwsk/pepsi002.png"
+            style="color: #e60c2c"
+          />
+        </li>
+        <li>
+          <!-- <img
+            src="https://i.postimg.cc/W3R8fxRw/pepsi003.png"
+            onclick="imgSlider('https://i.postimg.cc/W3R8fxRw/pepsi003.png'); changeColor('#1e1e1e')"
+          /> -->
+          <img
+            src="https://i.postimg.cc/W3R8fxRw/pepsi003.png"
+            style="color: #1e1e1e"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+      </ul>
+    </section>
+    <script>
+      const imgSlider = (anything) => {
+        document.querySelector(".pepsi").src = anything;
+      };
+      const changeColor = (color) => {
+        const sec = document.querySelector(".sec");
+        sec.style.background = color;
+      };
+      const contenedor = document.querySelector(".thumb");
+      contenedor.addEventListener("click", (e) => {
+        if (e.target && e.target.tagName === "IMG") {
+          imgSlider(e.target.src);
+          changeColor(e.target.style.color);
+        }
+      });
+    </script>
+  </body>
+</html>
