@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Product</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Store</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section class="banner">
+      <div class="imgBx">
+        <img src="https://i.postimg.cc/7Y6NbNq4/imagen2.jpg" class="active" />
+        <img src="https://i.postimg.cc/L5sjYHKD/imagen3.jpg" />
+        <img src="https://i.postimg.cc/k4sxg2ZD/imagen4.jpg" />
+        <img src="https://i.postimg.cc/R0sHkknn/Tanya-Degurechaff.jpg" />
+      </div>
+      <div class="contentBx">
+        <div class="active">
+          <h2>Lorem, ipsum dolor One.</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat a
+            quis voluptate dolore vel?
+          </p>
+          <a href="#">Details</a>
+        </div>
+        <div>
+          <h2>Lorem, ipsum dolor Two.</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat a
+            quis voluptate dolore vel?
+          </p>
+          <a href="#">Details</a>
+        </div>
+        <div>
+          <h2>Lorem, ipsum dolor Three.</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat a
+            quis voluptate dolore vel?
+          </p>
+          <a href="#">Details</a>
+        </div>
+        <div>
+          <h2>Lorem, ipsum dolor Four.</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat a
+            quis voluptate dolore vel?
+          </p>
+          <a href="#">Details</a>
+        </div>
+      </div>
+      <ul class="controls">
+        <li onclick="prevSlide();prevSlideText()"></li>
+        <li onclick="nextSlide();nextSlideText()"></li>
+      </ul>
+    </section>
+    <script>
+      const imgBx = document.querySelector(".imgBx");
+      const slides = imgBx.getElementsByTagName("img");
+
+      i = 0;
+
+      const nextSlide = () => {
+        slides[i].classList.remove("active");
+        i = (i + 1) % slides.length;
+        slides[i].classList.add("active");
+      };
+      const prevSlide = () => {
+        slides[i].classList.remove("active");
+        i = (i - 1 + slides.length) % slides.length;
+        slides[i].classList.add("active");
+      };
+
+      const contentBx = document.querySelector(".contentBx");
+      const slidesText = contentBx.getElementsByTagName("div");
+
+      j = 0;
+
+      const nextSlideText = () => {
+        slidesText[j].classList.remove("active");
+        j = (j + 1) % slidesText.length;
+        slidesText[j].classList.add("active");
+      };
+      const prevSlideText = () => {
+        slidesText[j].classList.remove("active");
+        j = (j - 1 + slidesText.length) % slidesText.length;
+        slidesText[j].classList.add("active");
+      };
+    </script>
+  </body>
+</html>
