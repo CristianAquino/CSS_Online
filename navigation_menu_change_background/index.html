@@ -1,50 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="menuToggle">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+      <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <div class="navigation">
-        <div class="navArea">
-            <ul>
-                <li style="--i:#905c49;"><a href="#" onmouseenter="changeImage('../2D_to_3D/img/im (1).jpg')">Home</a></li>
-                <li style="--i:#ffde0f;"><a href="#" onmouseenter="changeImage('../2D_to_3D/img/im (2).jpg')">About</a></li>
-                <li style="--i:#d28759;"><a href="#" onmouseenter="changeImage('../2D_to_3D/img/im (3).jpg')">Services</a></li>
-                <li style="--i:#72a785;"><a href="#" onmouseenter="changeImage('../2D_to_3D/img/im (4).jpg')">Portfolio</a></li>
-                <li style="--i:#01080e;"><a href="#" onmouseenter="changeImage('../2D_to_3D/img/im (5).jpg')">Team</a></li>
-                <li style="--i:#137ac7;"><a href="#" onmouseenter="changeImage('../2D_to_3D/img/im (6).jpg')">Contact</a></li>
-            </ul>
-        </div>
-        <div class="imgArea">
-            <img src="../2D_to_3D/img/im (1).jpg" id="slider">
-        </div>
+      <div class="navArea">
+        <ul>
+          <li style="--i: #905c49">
+            <a
+              href="#"
+              onmouseenter="changeImage('https://i.postimg.cc/SKM448n7/im-1.jpg')"
+              >Home</a
+            >
+          </li>
+          <li style="--i: #ffde0f">
+            <a
+              href="#"
+              onmouseenter="changeImage('https://i.postimg.cc/P5Nh60h7/im-2.jpg')"
+              >About</a
+            >
+          </li>
+          <li style="--i: #d28759">
+            <a
+              href="#"
+              onmouseenter="changeImage('https://i.postimg.cc/jdxRfL1t/im-3.jpg')"
+              >Services</a
+            >
+          </li>
+          <li style="--i: #72a785">
+            <a
+              href="#"
+              onmouseenter="changeImage('https://i.postimg.cc/7Zc4jXZZ/im-4.jpg')"
+              >Portfolio</a
+            >
+          </li>
+          <li style="--i: #01080e">
+            <a
+              href="#"
+              onmouseenter="changeImage('https://i.postimg.cc/pXsRJPN8/im-5.jpg')"
+              >Team</a
+            >
+          </li>
+          <li style="--i: #137ac7">
+            <a
+              href="#"
+              onmouseenter="changeImage('https://i.postimg.cc/wvYpjvJK/im-6.jpg')"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="imgArea">
+        <img src="https://i.postimg.cc/SKM448n7/im-1.jpg" id="slider" />
+      </div>
     </div>
     <script>
-        const menuToggle = document.querySelector('.menuToggle');
-        const navigation = document.querySelector('.navigation');
+      const menuToggle = document.querySelector(".menuToggle");
+      const navigation = document.querySelector(".navigation");
 
-        menuToggle.addEventListener('click',()=>{
-            menuToggle.classList.toggle('active');
-            navigation.classList.toggle('active');
-            if(menuToggle.classList[1]){
-                menuToggle.innerHTML = `<i class="fa fa-close" aria-hidden="true"></i>`
-                menuToggle.style.filter = 'invert(1)';
-            }else{
-                menuToggle.innerHTML = `<i class="fa fa-bars" aria-hidden="true"></i>`
-                menuToggle.style.filter = 'invert(0)';
-            }
-        })
-        function changeImage(anything){
-            document.getElementById('slider').src = anything;
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+        if (menuToggle.classList[1]) {
+          menuToggle.innerHTML = `<i class="fa fa-close" aria-hidden="true"></i>`;
+          menuToggle.style.filter = "invert(1)";
+        } else {
+          menuToggle.innerHTML = `<i class="fa fa-bars" aria-hidden="true"></i>`;
+          menuToggle.style.filter = "invert(0)";
         }
+      });
+      function changeImage(anything) {
+        document.getElementById("slider").src = anything;
+      }
     </script>
-</body>
+  </body>
 </html>

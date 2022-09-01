@@ -53,7 +53,7 @@ section {
   height: 100vh;
 }
 section.sec1 {
-  background-image: url(../2D_to_3D/img/imagen2.jpg);
+  background-image: url(https://i.postimg.cc/7Y6NbNq4/imagen2.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -69,12 +69,12 @@ section.sec2 p {
   font-size: 18px;
 }
 section.sec3 {
-  background-image: url(../2D_to_3D/img/imagen3.jpg);
+  background-image: url(https://i.postimg.cc/L5sjYHKD/imagen3.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
 section.sec4 {
-  background-image: url(../2D_to_3D/img/imagen4.jpg);
+  background-image: url(https://i.postimg.cc/k4sxg2ZD/imagen4.jpg);
   background-size: cover;
   background-attachment: fixed;
 }

@@ -1,77 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <section>
-        <header>
-            <a href="#" class="logo">Heroes</a>
-            <div class="toggle">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </div>
-            <ul class="navigation">
-                <li><a href="#" style="--i:1;">Home</a></li>
-                <li><a href="#" style="--i:2;">Characters</a></li>
-                <li><a href="#" style="--i:3;">Movies</a></li>
-                <li><a href="#" style="--i:4;">Games</a></li>
-                <li><a href="#" style="--i:5;">More</a></li>
-            </ul>
-        </header>
-        <div class="container">
-            <div class="box" style="--i:3;">
-                <div class="imgBx">
-                    <img src="../2D_to_3D/img/imagen1.jpg" alt="">
-                </div>
-            </div>
-            <div class="box" style="--i:4;">
-                <div class="imgBx">
-                    <img src="../2D_to_3D/img/imagen2.jpg" alt="">
-                </div>
-            </div>
-            <div class="box" style="--i:5;">
-                <div class="imgBx">
-                    <img src="../2D_to_3D/img/imagen3.jpg" alt="">
-                </div>
-            </div>
-            <div class="box" style="--i:6;">
-                <div class="imgBx">
-                    <img src="../2D_to_3D/img/imagen4.jpg" alt="">
-                </div>
-            </div>
+      <header>
+        <a href="#" class="logo">Heroes</a>
+        <div class="toggle">
+          <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
-        <div class="footer">
-            <ul class="sci">
-                <li><a href="#" style="--i:9;">Facebook</a></li>
-                <li><a href="#" style="--i:8;">Twitter</a></li>
-                <li><a href="#" style="--i:7;">Instagram</a></li>
-            </ul>
+        <ul class="navigation">
+          <li><a href="#" style="--i: 1">Home</a></li>
+          <li><a href="#" style="--i: 2">Characters</a></li>
+          <li><a href="#" style="--i: 3">Movies</a></li>
+          <li><a href="#" style="--i: 4">Games</a></li>
+          <li><a href="#" style="--i: 5">More</a></li>
+        </ul>
+      </header>
+      <div class="container">
+        <div class="box" style="--i: 3">
+          <div class="imgBx">
+            <img
+              src="https://i.postimg.cc/8cyBt7Bx/imagen1.jpg
+                    "
+              alt=""
+            />
+          </div>
         </div>
+        <div class="box" style="--i: 4">
+          <div class="imgBx">
+            <img src="https://i.postimg.cc/7Y6NbNq4/imagen2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="box" style="--i: 5">
+          <div class="imgBx">
+            <img src="https://i.postimg.cc/L5sjYHKD/imagen3.jpg" alt="" />
+          </div>
+        </div>
+        <div class="box" style="--i: 6">
+          <div class="imgBx">
+            <img src="https://i.postimg.cc/k4sxg2ZD/imagen4.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <ul class="sci">
+          <li><a href="#" style="--i: 9">Facebook</a></li>
+          <li><a href="#" style="--i: 8">Twitter</a></li>
+          <li><a href="#" style="--i: 7">Instagram</a></li>
+        </ul>
+      </div>
     </section>
     <script>
-        const menuToggle = document.querySelector('.toggle');
-        const navigation = document.querySelector('.navigation');
-        let imgBx = document.querySelectorAll('.imgBx');
-        imgBx.forEach((element)=>{
-            element.addEventListener('click',()=>{
-                element.classList.toggle('active');
-            })
-        })
+      const menuToggle = document.querySelector(".toggle");
+      const navigation = document.querySelector(".navigation");
+      let imgBx = document.querySelectorAll(".imgBx");
+      imgBx.forEach((element) => {
+        element.addEventListener("click", () => {
+          element.classList.toggle("active");
+        });
+      });
 
-        menuToggle.addEventListener('click',()=>{
-            menuToggle.classList.toggle('active');
-            navigation.classList.toggle('active');
-            if(menuToggle.classList[1]){
-                menuToggle.innerHTML = `<i class="fa fa-close" aria-hidden="true"></i>`;
-            }else{
-                menuToggle.innerHTML = `<i class="fa fa-bars" aria-hidden="true"></i>`;
-            }
-        })
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+        if (menuToggle.classList[1]) {
+          menuToggle.innerHTML = `<i class="fa fa-close" aria-hidden="true"></i>`;
+        } else {
+          menuToggle.innerHTML = `<i class="fa fa-bars" aria-hidden="true"></i>`;
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
