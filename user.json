@@ -1,0 +1,64 @@
+[
+  {
+    "idUser": 231321,
+    "user": "userUno",
+    "email": "user@gmail.com",
+    "password": "qwe",
+    "folder": [
+      {
+        "idFolder": 1,
+        "nameFolder": "naruto",
+        "folderDescription": "ga",
+        "folderImage": "www",
+        "folderChapter": [
+          {
+            "idCapitulo": 1,
+            "capituloName": "Capitulo1",
+            "capituloImage": [
+              {
+                "idImage": 1,
+                "imageUrl": "www"
+              },
+              {
+                "idImage": 2,
+                "imageUrl": "www"
+              }
+            ]
+          },
+          {
+            "idCapitulo": 2,
+            "capituloName": "Capitulo2",
+            "capituloImage": [
+              {
+                "idImage": 1,
+                "imageUrl": "www"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "idFolder": 2,
+        "nameFolder": "boruto",
+        "folderDescription": "gaaaaa",
+        "folderImage": "www",
+        "folderChapter": [
+          {
+            "idCapitulo": 1,
+            "capituloName": "Capitulo1",
+            "capituloImage": [
+              {
+                "idImage": 1,
+                "imageUrl": "www"
+              },
+              {
+                "idImage": 2,
+                "imageUrl": "www"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
