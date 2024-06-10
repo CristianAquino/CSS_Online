@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 100vh;
+  background-color: #222;
+}
+.box {
+  position: relative;
+  display: flex;
+}
+.box .item {
+  position: absolute;
+  inset-block-start: calc(50% - 150px);
+  inset-inline-start: calc(50% - 100px);
+  inline-size: 200px;
+  block-size: 300px;
+  background-color: #cb4af7;
+  transition: 0.25s;
+  box-shadow: 0 0 50px rgb(0 0 0/50%);
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-weight: 800;
+  color: #fff;
+  opacity: 0;
+}
+.box .item:nth-child(1) {
+  transform: translate3d(-250px, 0, 0) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+  background-color: #ff6464;
+}
+.box .item:nth-child(2) {
+  transform: translate3d(-250px, 0, 0) scale(0.8);
+  opacity: 1;
+  z-index: 2;
+  background-color: #ff6464;
+}
+.box .item:nth-child(3) {
+  transform: translate3d(-150px, 0, 0) scale(0.9);
+  opacity: 1;
+  z-index: 3;
+  background-color: #64c0ff;
+  font-size: 6rem;
+}
+.box .item:nth-child(4) {
+  transform: translate3d(0px, 0, 0) scale(1);
+  opacity: 1;
+  z-index: 4;
+  background-color: #fff;
+  color: #333;
+  font-size: 8rem;
+}
+.box .item:nth-child(5) {
+  transform: translate3d(150px, 0, 0) scale(0.9);
+  opacity: 1;
+  z-index: 3;
+  background-color: #48e365;
+  font-size: 6rem;
+}
+.box .item:nth-child(6) {
+  transform: translate3d(250px, 0, 0) scale(0.8);
+  opacity: 1;
+  z-index: 2;
+  background-color: #cb4af7;
+}
+.box .item:nth-child(7) {
+  transform: translate3d(250px, 0, 0) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+}

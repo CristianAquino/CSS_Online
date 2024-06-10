@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box"></div>
+    <script>
+      let box = document.querySelector(".box");
+      for (let i = 1; i <= 50; i++) {
+        let div = document.createElement("div");
+        div.className = "item";
+        div.textContent = i;
+        box.appendChild(div);
+      }
+      function moveNext() {
+        let items = document.querySelectorAll(".item");
+        box.appendChild(items[0]);
+      }
+      function movePrev() {
+        let items = document.querySelectorAll(".item");
+        box.prepend(items[items.length - 1]);
+      }
+      window.addEventListener("wheel", (e) => {
+        if (e.deltaY > 0) {
+          moveNext();
+        } else {
+          movePrev();
+        }
+      });
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") {
+          moveNext();
+        } else if (e.key === "ArrowLeft") {
+          movePrev();
+        }
+      });
+    </script>
+  </body>
+</html>
