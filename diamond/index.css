@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-block-size: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #222;
+}
+img {
+  max-inline-size: 100%;
+}
+.gallery {
+  --img-size: 100px;
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(6, var(--img-size));
+  grid-template-rows: repeat(3, var(--img-size));
+  img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    grid-column: span 2;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transition: clip-path 500ms;
+
+    &:nth-of-type(4) {
+      grid-column: 2 / span 2;
+    }
+    &:hover {
+      z-index: 100;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    &:not(:hover) {
+      animation: zIndex 500ms;
+    }
+  }
+}
+@keyframes zIndex {
+  0%,
+  100% {
+    z-index: 10;
+  }
+}
